@@ -1,0 +1,28 @@
+
+PROCEDURE insertionSort(tab,n) 
+    VAR                       
+          ps : integer := 0 ;             
+    BEGIN
+         FOR i FROM 0 TO N-1 do
+             elem:=t[i];
+             j:=i;
+             WHILE (j>=0 AND tab[j-1]>elem) DO
+                 tab[j]:= tab[j-1];
+                 j := j-1;
+              END WHILE
+             tab[j] := elem;
+        END_FOR
+ALGORITHM sorting and searching
+VAR
+    tab : ARRAY OF INTEGER [n] ;               
+    n,i:integer;
+
+BEGIN
+    read(n);
+    FOR i FROM 0 TO n-1 do
+        read(tab[i]);
+    END_FOR
+    insertionSort(tab,n); 
+    
+END
+
